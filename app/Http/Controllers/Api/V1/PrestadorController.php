@@ -42,8 +42,7 @@ class PrestadorController extends Controller
     {
         $query = PrestadorServico::with('prestador')->where('id_servico','=',$id_servico);
       
-        if($qtd)
-            $query->limit($qtd);
+  
         
         $prestadores =  $query->get();
 
@@ -72,7 +71,8 @@ class PrestadorController extends Controller
             }
    
         }
-
+      if($qtd)
+            $prestadorCollection->take($qtd);
         return $prestadorCollection;
     }
     
@@ -158,7 +158,4 @@ class PrestadorController extends Controller
         return $estadosBrasil[$uf];
     }
 
-    
-
-    
 }

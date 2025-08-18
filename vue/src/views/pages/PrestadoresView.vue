@@ -125,7 +125,7 @@ function buscarPrestador(){
         <form class="flex" v-on:submit="buscarPrestador" id="form">
             <div class="card flex flex-col gap-4 w-full grid" >
                 <h1>Pesquisar prestador</h1>
-                <Fluid class="flex flex-wrap flex-col xl:flex-row  gap-4"style="max-width: 950px">
+                <Fluid class="flex flex-wrap flex-col xl:flex-row items-start gap-4"style="max-width: 950px">
                     <div class="flex flex-col col-span-4 md:flex-row gap-4 flex-1">
                         <div class="flex col-span-4 flex-wrap gap-2 w-full">
                             <label for="id_servico">Serviço*</label>
